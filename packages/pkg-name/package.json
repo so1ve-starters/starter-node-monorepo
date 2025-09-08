@@ -1,36 +1,42 @@
 {
-	"name": "@org-name/pkg-name",
-	"version": "0.0.0",
-	"author": "Ray <i@mk1.io> (https://github.com/so1ve)",
-	"description": "A Monorepo package",
-	"keywords": [],
-	"homepage": "https://github.com/so1ve/repo-name/tree/main/packages/pkg-name#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/so1ve/repo-name.git",
-		"directory": "/"
-	},
-	"bugs": {
-		"url": "https://github.com/so1ve/repo-name/issues"
-	},
-	"license": "MIT",
-	"sideEffects": false,
-	"exports": {
-		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs"
-		}
-	},
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"files": [
-		"dist"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"build": "tsup",
-		"watch": "tsup --watch"
-	}
+  "name": "@org-name/pkg-name",
+  "version": "0.0.0",
+  "author": "Ray <i@mk1.io> (https://github.com/so1ve)",
+  "description": "A Monorepo package",
+  "keywords": [],
+  "homepage": "https://github.com/so1ve/repo-name/tree/main/packages/pkg-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/so1ve/repo-name.git",
+    "directory": "/"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/so1ve/repo-name/issues"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "watch": "tsdown --watch"
+  }
 }

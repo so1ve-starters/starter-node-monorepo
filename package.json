@@ -1,29 +1,30 @@
 {
-	"private": true,
-	"packageManager": "pnpm@8.15.6",
-	"type": "module",
-	"scripts": {
-		"build": "pnpm -r run build",
-		"lint": "eslint . && prettier . --check",
-		"lint:fix": "eslint . --fix && prettier . --write",
-		"prepublishOnly": "nr build",
-		"release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm publish -r --filter ./packages/*",
-		"test": "vitest",
-		"typecheck": "tsc --noEmit",
-		"watch": "pnpm -r --parallel run watch"
-	},
-	"devDependencies": {
-		"@antfu/ni": "^0.21.3",
-		"@so1ve/eslint-config": "^2.0.0",
-		"@so1ve/prettier-config": "^2.0.0",
-		"@types/node": "^20.8.3",
-		"bumpp": "^9.1.0",
-		"eslint": "^8.57.0",
-		"prettier": "^3.0.0",
-		"tsup": "^8.0.2",
-		"tsx": "^3.12.7",
-		"typescript": "^5.0.4",
-		"vite": "^4.3.5",
-		"vitest": "^0.34.0"
-	}
+  "private": true,
+  "packageManager": "pnpm@10.15.1",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "lint": "eslint . || prettier . --check",
+    "lint:fix": "eslint . --fix || prettier . --write",
+    "prepublishOnly": "nr build",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm publish -r --filter ./packages/*",
+    "test": "vitest",
+    "typecheck": "tsgo --noEmit",
+    "watch": "pnpm -r --parallel run watch"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^25.0.0",
+    "@so1ve/eslint-config": "^3.9.0",
+    "@so1ve/prettier-config": "^3.9.0",
+    "@types/node": "^24.3.1 ",
+    "@typescript/native-preview": "7.0.0-dev.20250907.1",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.35.0",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.14.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vitest": "^3.2.4"
+  }
 }
